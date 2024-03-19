@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,17 +13,19 @@
 		1C40C4FD24985DD300320D9C /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C4FC24985DD200320D9C /* Controller.swift */; };
 		1C40C4FF24985DEF00320D9C /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C4FE24985DEF00320D9C /* Server.swift */; };
 		1C40C50224985FE100320D9C /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 1C40C50124985FE100320D9C /* CocoaAsyncSocket */; };
+		BFFEC05F2BA92CD80059779C /* orgmark in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1C40C4E4249849CE00320D9C /* orgmark */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1C40C4E2249849CE00320D9C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = "${SRCROOT}/..";
 			dstSubfolderSpec = 0;
 			files = (
+				BFFEC05F2BA92CD80059779C /* orgmark in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -31,7 +33,7 @@
 		1C1F34FB249948C9006B821D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1C40C4E4249849CE00320D9C /* orgmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = orgmark; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C40C4FC24985DD200320D9C /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		1C40C4FE24985DEF00320D9C /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Server.swift; path = ../../../Server.swift; sourceTree = "<group>"; };
+		1C40C4FE24985DEF00320D9C /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Server.swift; path = ../Server.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,10 +270,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4AX3F7R9XQ;
+				DEVELOPMENT_TEAM = 63V9M7H23J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.willemml.orgmark-cli";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.github.jun0.orgmark-cli";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -281,10 +283,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4AX3F7R9XQ;
+				DEVELOPMENT_TEAM = 63V9M7H23J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.willemml.orgmark-cli";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.github.jun0.orgmark-cli";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

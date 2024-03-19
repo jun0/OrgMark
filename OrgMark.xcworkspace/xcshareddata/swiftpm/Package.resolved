@@ -1,4 +1,5 @@
 {
+  "originHash" : "2dc290e285ec6644e89899ba0e4a76f4ca43af9b05454a7a41bcc43a450d3097",
   "pins" : [
     {
       "identity" : "cocoaasyncsocket",
@@ -28,5 +29,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
