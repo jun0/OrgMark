@@ -23,8 +23,24 @@
   process
   file)
 
-(defvar orgmark-path "orgmark"
-  "Path to orgmark binary.")
+(defgroup orgmark nil
+  "Insert images drawn on iPad to Org files."
+  :group 'tools)
+
+(defcustom orgmark-path "orgmark"
+  "Path to orgmark binary."
+  :group 'orgmark
+  :type 'string)
+
+(defcustom orgmark-image-file-name-fun #'orgmark--image-file-name-default-fun
+  "Function to generate a file name for newly inserted images.
+
+Called without arguments, with point at the location where the
+file is to be inserted.  Should return an absolute path.  The
+rendered image will be saved to the same path, except with the
+extension changed to .png."
+  :group 'orgmark
+  :type 'function)
 
 (defvar orgmark--job nil
   "Last command.")
@@ -82,14 +98,17 @@
     (set-process-sentinel (orgmark-job-process orgmark--job)
                           #'orgmark--sentinal)))
 
+(defun orgmark--image-file-name-default-fun ()
+  (expand-file-name
+   (format "%s.pkdrawing"
+           (format-time-string "%Y%m%d%H%M%S"))))
+
 ;;; Userland
 
 (defun orgmark-insert ()
   "Insert a drawing at point of SIZE."
   (interactive)
-  (let ((file (expand-file-name
-               (format "%s.pkdrawing"
-                       (format-time-string "%Y%m%d%H%M%S")))))
+  (let ((file (funcall orgmark-image-file-name-fun)))
     (orgmark--edit-file file 'insert)))
 
 (defun orgmark-edit ()
