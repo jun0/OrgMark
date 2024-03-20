@@ -1,6 +1,8 @@
 ;;; orgmark.el --- OrgMark      -*- lexical-binding: t; -*-
 
 ;; Author: Yuan Fu <casouri@gmail.com>
+;; Package-Version: 0.1
+;; Package-Requires: ((emacs "29.1") (org "9.6.6"))
 
 ;;; This file is NOT part of GNU Emacs
 
